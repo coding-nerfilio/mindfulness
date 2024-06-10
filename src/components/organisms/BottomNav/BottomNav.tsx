@@ -36,12 +36,12 @@ const BottomNav = () => {
                 }}
             >
                 <BottomNavigationAction
-                    label="History"
+                    label="Historico"
                     icon={<TimelineIcon />}
                 />
-                <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+                <BottomNavigationAction label="Inicio" icon={<HomeIcon />} />
                 <BottomNavigationAction
-                    label="My Account"
+                    label="Mi Cuenta"
                     icon={<PersonIcon />}
                 />
             </BottomNavigation>
