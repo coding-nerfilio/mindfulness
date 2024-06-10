@@ -5,7 +5,7 @@ import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
+import PsychologyIcon from '@mui/icons-material/Psychology'
 
 import {Route} from '../../../router'
 import userAvatarImage from '../../../assets/images/user.png'
@@ -39,7 +39,7 @@ const Navbar = () => {
                         className={styles.FlexCentered}
                         onClick={() => navigate(Route.HOME)}
                     >
-                        <RocketLaunchIcon
+                        <PsychologyIcon
                             sx={{display: {xs: 'none', md: 'flex'}, mr: 1}}
                         />
                         <Typography
@@ -55,11 +55,11 @@ const Navbar = () => {
                                 textDecoration: 'none',
                             }}
                         >
-                            MY-APP
+                            Mindfulness
                         </Typography>
                     </Box>
 
-                    <RocketLaunchIcon
+                    <PsychologyIcon
                         sx={{display: {xs: 'flex', md: 'none'}, mr: 1}}
                         onClick={() => navigate(Route.HOME)}
                     />
@@ -78,7 +78,7 @@ const Navbar = () => {
                             textDecoration: 'none',
                         }}
                     >
-                        MY-APP
+                        Mindfulness
                     </Typography>
 
                     <UserAvatar
