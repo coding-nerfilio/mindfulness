@@ -2,7 +2,7 @@ import Box from '@mui/material/Box'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
 import HomeIcon from '@mui/icons-material/Home'
-import FavoriteIcon from '@mui/icons-material/Favorite'
+import TimelineIcon from '@mui/icons-material/Timeline'
 import PersonIcon from '@mui/icons-material/Person'
 import {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
@@ -12,7 +12,7 @@ import {Route} from '../../../router'
 import styles from './BottomNav.module.css'
 
 const BottomNav = () => {
-    const [value, setValue] = useState(0)
+    const [value, setValue] = useState(1)
     const navigate = useNavigate()
 
     return (
@@ -24,10 +24,10 @@ const BottomNav = () => {
                     setValue(newValue)
                     switch (newValue) {
                         case 0:
-                            navigate(Route.HOME)
+                            navigate(Route.HISTORY)
                             break
                         case 1:
-                            navigate(Route.FAVORITES)
+                            navigate(Route.HOME)
                             break
                         case 2:
                             navigate(Route.ACCOUNT)
@@ -35,12 +35,15 @@ const BottomNav = () => {
                     }
                 }}
             >
+                <BottomNavigationAction
+                    label="History"
+                    icon={<TimelineIcon />}
+                />
                 <BottomNavigationAction label="Home" icon={<HomeIcon />} />
                 <BottomNavigationAction
-                    label="Favorites"
-                    icon={<FavoriteIcon />}
+                    label="My Account"
+                    icon={<PersonIcon />}
                 />
-                <BottomNavigationAction label="Account" icon={<PersonIcon />} />
             </BottomNavigation>
         </Box>
     )
